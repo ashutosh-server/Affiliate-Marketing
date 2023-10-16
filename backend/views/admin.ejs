@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+  </head>
+  <body
+    style="background-color: #550aa9; display: flex; justify-content: center"
+  >
+    <div style="color: white">
+      <div style="display: flex; justify-content: center">
+        <h1>Admin</h1>
+      </div>
+      <table border="1" style="border: white; width: 1000px">
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th></th>
+        </tr>
+        <% for(var ad of datas) { %>
+        <tr>
+          <td><%= ad._id %></td>
+          <td><%= ad.Username %></td>
+          <td><%= ad.Email %></td>
+          <td><%= ad.Password %></td>
+          <td>
+            <a href="/editdata/<%=ad._id %>" style="text-decoration: none; color: white"> Update</a
+            >,<a href="/deletedata/<%=ad._id %>" style="text-decoration: none; color: white">
+              Delete</a
+            >
+          </td>
+        </tr>
+
+        <% } %>
+      </table>
+    </div>
+  </body>
+</html>
