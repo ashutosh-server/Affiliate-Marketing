@@ -20,7 +20,7 @@ const Login = () => {
       // alert("Login is Invalid!");
     }
     try {
-      let response = await axios.post("http://192.168.70.186:8000/login", {
+      let response = await axios.post("http://192.168.0.15:8000/login", {
         Email: Email,
         Password: Password,
       });
